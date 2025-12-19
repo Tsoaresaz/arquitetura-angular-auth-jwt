@@ -1,0 +1,66 @@
+<div class="c-login">
+  <div class="c-login-wrapper">
+    <img
+      class="c-login-logo"
+      src="assets/icon/cart.svg"
+      alt="logo tela de login"
+      aria-hidden="true"
+    />
+    <small *ngIf="inforError" class="info-error-bg">{{ inforError }}</small>
+    <div class="c-login-form-wrapper">
+      <form
+        class="c-login-form c-form"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()"
+      >
+        <div class="c-form-control">
+          <div class="c-form-control__icon">
+            <img
+              src="assets/icon/user.svg"
+              alt="ícone usuário"
+              aria-hidden="true"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="USERNAME"
+              formControlName="email"
+            />
+          </div>
+          @if(loginForm.get('email')?.invalid &&
+          loginForm.get('email')?.touched) {
+          <small class="info-error">{{ getErrorMessage("email") }}</small>
+          }
+        </div>
+        <div class="c-form-control">
+          <div class="c-form-control__icon">
+            <img
+              src="assets/icon/lock.svg"
+              alt="ícone usuário"
+              aria-hidden="true"
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="PASSWORD"
+              formControlName="password"
+            />
+          </div>
+          @if(loginForm.get('password')?.invalid &&
+          loginForm.get('password')?.touched) {
+          <small class="info-error">{{ getErrorMessage("password") }}</small>
+          }
+        </div>
+        <div class="c-form-control">
+          <button
+            class="c-form-control-button"
+            type="submit"
+            [disabled]="loginForm.invalid"
+          >
+            login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

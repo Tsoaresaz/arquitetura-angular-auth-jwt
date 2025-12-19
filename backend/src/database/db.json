@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1765978658416,
+      "name": "Teste 01",
+      "email": "teste01@mail.com",
+      "password": "$2b$10$CrwMpIJniUchJH3Q/71QG.18Z8OzFA.ajEMB.uSxz.JEjr0DSA3sS"
+    },
+    {
+      "id": 1765979827401,
+      "name": "Teste 02",
+      "email": "teste02@mail.com",
+      "password": "$2b$10$Fg9tJ3VM6Ho4IXlBvFcN/OTmkgpIxfuk9E2AYBOzcCBpYJ3gXZNPO"
+    }
+  ]
+}

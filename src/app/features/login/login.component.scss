@@ -1,0 +1,95 @@
+$white: #fff;
+
+.c-login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &-logo {
+    width: 50%;
+    max-width: 82px;
+    margin-bottom: 60px;
+  }
+}
+
+.c-form-control {
+  margin-bottom: 20px;
+  &__icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    > img {
+      display: block;
+      padding: 11px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+    }
+
+    > input {
+      width: 37vw;
+      max-width: 272px;
+      padding: 12px 7px;
+      color: $white;
+      border: none;
+      background-color: transparent;
+      border: 1px solid $white;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+      outline: none;
+
+      &::placeholder {
+        color: $white;
+      }
+
+      @media (max-width: 860px) {
+        width: 70vw;
+        max-width: unset;
+      }
+    }
+  }
+
+  &-button {
+    width: 100%;
+    padding: 8px;
+    columns: #264eca;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    background-color: $white;
+    border-radius: 7px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.info-error {
+  display: block;
+  color: #e53935;
+  text-align: left;
+  margin-top: 7px;
+}
+
+.info-error-bg {
+  display: block;
+  color: $white;
+  background-color: #e53935;
+  text-align: left;
+  margin: 28px 0;
+  width: 100%;
+  text-align: center;
+  padding: 7px 8px;
+  border-radius: 7px;
+}
