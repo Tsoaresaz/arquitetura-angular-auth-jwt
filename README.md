@@ -1,22 +1,57 @@
-# Angular 19 – Aplicação com Autenticação e Testes Unitários
+# 🚀 Angular 19 – Autenticação JWT com Testes Unitários (100%) e E2E
 
-Este projeto foi desenvolvido com **Angular 19**, seguindo **boas práticas de arquitetura, organização de código e testes automatizados**.  
-O objetivo deste repositório é demonstrar minhas habilidades em **frontend moderno, testes unitários e integração com backend**.
+Aplicação desenvolvida com **Angular 19**, focada em **boas práticas de arquitetura**, **testes automatizados** e **fluxo real de autenticação com JWT**.
 
-A aplicação possui autenticação via **JWT**, consumindo um backend simples desenvolvido em **Node.js + Express**, utilizado exclusivamente para fins de teste e demonstração.
+Este projeto foi criado como **portfólio profissional**, demonstrando domínio em:
+
+- **Angular moderno**
+- **Testes unitários com 100% de cobertura**
+- **Testes E2E com Cypress**
+- **Integração frontend + backend**
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🎯 Visão Geral do Projeto
+
+✔ Autenticação completa com **JWT**  
+✔ Proteção de rotas com **Auth Guard**  
+✔ Persistência e remoção de token no **localStorage**  
+✔ **Testes unitários (Jasmine)** com **100% de cobertura**  
+✔ **Testes E2E (Cypress)** cobrindo:
+
+- Validações de formulário
+- Login com sucesso
+- Persistência do token
+- Logout e limpeza do token
+
+✔ Backend de autenticação com **Node.js + Express**
+
+---
+
+## 🧠 Principais Conceitos Demonstrados
+
+- Arquitetura organizada e escalável
+- Standalone Components (Angular 19)
+- Lazy loading de rotas
+- Services e Guards bem definidos
+- Separação clara de responsabilidades
+- Testes automatizados em diferentes níveis:
+  - Unitários
+  - End-to-End (E2E)
+- Boas práticas de testes de UI com `data-testid`
+
+---
+
+## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
 
 - **Angular 19**
 - **TypeScript**
 - **Angular Router**
-- **Services e Guards**
-- **Testes unitários com Jasmine e Karma**
-- **Cobertura de testes: 100%**
+- **Services & Guards**
+- **Jasmine + Karma** (testes unitários)
+- **Cypress** (testes E2E)
 
 ### Backend (API de Autenticação)
 
@@ -27,27 +62,15 @@ A aplicação possui autenticação via **JWT**, consumindo um backend simples d
 
 ---
 
-## ✅ Boas Práticas Aplicadas
+## 🧪 Testes Automatizados
 
-- Separação de responsabilidades (components, services, guards)
-- Uso de **Standalone Components**
-- Lazy loading de rotas
-- Testes unitários cobrindo:
-  - Components
-  - Services
-  - Guards
-- Uso de **mocks e spies** para isolamento de testes
-- Código limpo, legível e escalável
-
----
-
-## 📊 Testes Unitários
+### ✅ Testes Unitários
 
 - Framework: **Jasmine**
 - Runner: **Karma**
-- Cobertura de código: **100%**
+- Cobertura: **100%**
 
-### Executar testes:
+Executar testes:
 
 ```bash
 npm run test
@@ -59,26 +82,52 @@ Gerar relatório de cobertura:
 npm run test:coverage
 ```
 
-O relatório será gerado na pasta:
+O relatório será gerado em:
 
 ```bash
 coverage/
 ```
 
-▶️ Como Executar a Aplicação Angular
-Pré-requisitos
+---
 
-Node.js (versão recomendada: 22.12.0)
+### ✅ Testes E2E (Cypress)
 
-Angular CLI 19.0.0
+Os testes E2E cobrem:
 
-📦 Instalar dependências de front-end:
+- Validação de campos obrigatórios
+- Validação de formato de e-mail
+- Fluxo de login com sucesso
+- Salvamento do token no `localStorage`
+- Logout e remoção do token
+
+Executar Cypress:
+
+```bash
+npx cypress open
+```
+
+Ou modo headless:
+
+```bash
+npx cypress run
+```
+
+---
+
+## ▶️ Como Executar a Aplicação Angular
+
+### Pré-requisitos
+
+- **Node.js** (recomendado: 22.12.0)
+- **Angular CLI** 19+
+
+Instalar dependências:
 
 ```bash
 npm install
 ```
 
-Executar em ambiente de desenvolvimento
+Executar em ambiente de desenvolvimento:
 
 ```bash
 npm run start
@@ -90,60 +139,59 @@ A aplicação estará disponível em:
 http://localhost:4200
 ```
 
-🔐 Backend – API de Login (Node.js + Express)
+---
 
-Este backend foi criado apenas para testes de autenticação, simulando um fluxo real de login com JWT.
+## 🔐 Backend – API de Login (Node.js + Express)
 
-📁 Acessar a pasta do backend
+Backend simples criado apenas para **simular um fluxo real de autenticação JWT**.
+
+### Instalar dependências
 
 ```bash
 cd backend
-```
-
-📦 Instalar dependências de back-end:
-
-```bash
 npm install
 ```
 
-⚙️ Configuração do Arquivo .env
+### Configurar `.env`
 
-Crie um arquivo .env na raiz do backend com o seguinte conteúdo:
+Crie um arquivo `.env` na raiz do backend:
 
 ```bash
 PORT=3000
 JWT_SECRET=dev_xxxx
 ```
 
-▶️ Executar o Backend em outro terminal:
+### Executar o backend
 
 ```bash
 npm run dev
 ```
 
-A API ficará disponível em:
+API disponível em:
 
 ```bash
 http://localhost:3000
 ```
 
-Endpoint disponível
+Endpoint disponível:
 
-- POST /login
+- `POST /login`
 
-🎯 Objetivo do Projeto
+---
 
-Este projeto tem como finalidade:
+## 📌 Objetivo do Projeto
 
-- Demonstrar domínio em Angular moderno (v19)
+Este projeto foi desenvolvido para:
 
-- Aplicar testes unitários com alta cobertura
+- Demonstrar domínio em **Angular moderno (v19)**
+- Aplicar **boas práticas de arquitetura frontend**
+- Implementar **autenticação baseada em JWT**
+- Garantir **qualidade de código com testes automatizados**
+- Simular padrões utilizados em **aplicações reais de mercado**
 
-- Implementar autenticação baseada em JWT
+---
 
-- Seguir padrões utilizados em aplicações reais de mercado
+## 👤 Autor
 
-👤 Autor
-
-Thiago Soares
+**Thiago Soares**  
 Desenvolvedor Frontend | Angular
