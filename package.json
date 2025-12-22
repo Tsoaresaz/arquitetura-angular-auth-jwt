@@ -7,7 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:coverage": "ng test --code-coverage"
+    "test:coverage": "ng test --code-coverage",
+    "e2e:cypress": "cypress open",
+    "e2e:cypress:run": "cypress run",
+    "e2e:playwright": "playwright test",
+    "e2e:playwright:ui": "playwright test --ui"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +30,9 @@
     "@angular-devkit/build-angular": "^19.2.19",
     "@angular/cli": "^19.2.19",
     "@angular/compiler-cli": "^19.2.0",
+    "@playwright/test": "^1.57.0",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^25.0.3",
     "cypress": "^15.8.1",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
