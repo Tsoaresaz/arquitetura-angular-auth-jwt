@@ -6,7 +6,7 @@ Este projeto foi criado como **portfólio profissional**, demonstrando domínio 
 
 - **Angular moderno**
 - **Testes unitários com 100% de cobertura**
-- **Testes E2E com Cypress**
+- **Testes E2E com Cypress e Playwright**
 - **Integração frontend + backend**
 
 ---
@@ -24,6 +24,13 @@ Este projeto foi criado como **portfólio profissional**, demonstrando domínio 
 - Persistência do token
 - Logout e limpeza do token
 
+✔ **Testes E2E com Playwright,** cobrindo:
+
+- Validações de formulário e mensagens de erro
+- Estados de UI (botão desabilitado, erros visíveis)
+- Validação de token no localStorage
+- Uso de Page Object Pattern
+
 ✔ Backend de autenticação com **Node.js + Express**
 
 ---
@@ -39,6 +46,7 @@ Este projeto foi criado como **portfólio profissional**, demonstrando domínio 
   - Unitários
   - End-to-End (E2E)
 - Boas práticas de testes de UI com `data-testid`
+- Comparação prática entre Cypress vs Playwright
 
 ---
 
@@ -52,6 +60,7 @@ Este projeto foi criado como **portfólio profissional**, demonstrando domínio 
 - **Services & Guards**
 - **Jasmine + Karma** (testes unitários)
 - **Cypress** (testes E2E)
+- **Playwright** (testes E2E)
 
 ### Backend (API de Autenticação)
 
@@ -110,6 +119,31 @@ Ou modo headless:
 
 ```bash
 npx cypress run
+```
+
+---
+
+### ✅ Testes E2E (Playwright)
+
+Os testes E2E com Playwright focam em comportamento real do usuário, estado da aplicação e robustez dos testes.
+
+Principais abordagens:
+
+- Uso de **Page Object Pattern**
+- Validação de estados da UI (`toBeDisabled, toBeVisible`)
+- Verificação de token no `localStorage`
+- Testes mais resilientes a mudanças de layout
+
+Executar Playwright:
+
+```bash
+npx playwright test
+```
+
+Modo UI:
+
+```bash
+npx playwright test --ui
 ```
 
 ---
@@ -187,7 +221,26 @@ Este projeto foi desenvolvido para:
 - Aplicar **boas práticas de arquitetura frontend**
 - Implementar **autenticação baseada em JWT**
 - Garantir **qualidade de código com testes automatizados**
+- Comparar na prática Cypress vs Playwright
 - Simular padrões utilizados em **aplicações reais de mercado**
+
+---
+
+## 🎯 Por que Cypress e Playwright neste projeto?
+
+Além do Cypress, optei por introduzir o Playwright neste projeto com o objetivo de aprendizado e comparação prática entre as ferramentas.
+
+A ideia foi:
+
+- Aprofundar conhecimentos em Playwright, explorando seus recursos nativos
+
+- Comparar abordagens de testes E2E (Cypress vs Playwright) em um mesmo cenário real
+
+- Aplicar Page Object Pattern e boas práticas de testes de UI
+
+- Avaliar diferenças de performance, legibilidade e robustez dos testes
+
+Essa decisão reforça meu compromisso com aprendizado contínuo, qualidade de código e adoção de ferramentas modernas utilizadas no mercado.
 
 ---
 
